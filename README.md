@@ -4,11 +4,13 @@ Static GitHub Pages site for Dr.-Ing. Paula A. Pérez-Toro.
 
 The page has been updated with details from the provided April 2026 academic CV. Private contact details from the CV were intentionally not included in the public webpage.
 The selected publications section was refreshed from the provided April 2026 citation export.
+The design also includes open-access research snapshot figures from recent papers involving Dr.-Ing. Paula A. Pérez-Toro.
 
 ## Files
 
 - `index.html` - single-page academic profile
 - `styles.css` - responsive styling
+- `assets/` - optimized portrait and paper-figure images used by the page
 - `.nojekyll` - ensures GitHub Pages serves the static files directly
 - `.github/workflows/pages.yml` - deploys the static site to GitHub Pages from `main`
 
