@@ -16,6 +16,6 @@ The page has been updated with details from the provided April 2026 academic CV.
 1. Create a public GitHub repository, for example `paula-andrea-perez-toro`.
 2. Push these files to the repository's `main` branch.
 3. In GitHub, open **Settings > Pages** and set the source to **GitHub Actions**.
-4. The page will publish at `https://<github-user>.github.io/paula-andrea-perez-toro/`.
+4. The page will publish at `https://pauperezt.github.io/paula-andrea-perez-toro/`.
 
 Sources are linked at the bottom of the webpage.
