@@ -2,6 +2,8 @@
 
 Static GitHub Pages site for Dr.-Ing. Paula Andrea Perez-Toro.
 
+The page has been updated with details from the provided April 2026 academic CV. Private contact details from the CV were intentionally not included in the public webpage.
+
 ## Files
 
 - `index.html` - single-page academic profile

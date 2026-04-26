@@ -224,7 +224,7 @@ h3 {
 
 .quick-facts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   border-block: 1px solid var(--line);
   background: var(--line);
@@ -284,6 +284,7 @@ h3 {
 }
 
 .research-grid article,
+.service-grid article,
 .publication-list article,
 .timeline article {
   border: 1px solid var(--line);
@@ -368,6 +369,21 @@ h3 {
 
 .awards {
   background: #eef2e9;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-grid article {
+  padding: 1.2rem;
+}
+
+.service-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .awards ul,
@@ -478,6 +494,7 @@ h3 {
   .quick-facts,
   .publication-list,
   .research-grid,
+  .service-grid,
   .awards ul,
   .sources ul {
     grid-template-columns: 1fr;
