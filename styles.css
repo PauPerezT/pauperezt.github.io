@@ -492,7 +492,8 @@ h3 {
 }
 
 .awards {
-  background: #ede4f8;
+  border-block: 1px solid var(--line);
+  background: #f7f1fb;
 }
 
 .service-grid {
@@ -522,13 +523,21 @@ h3 {
 
 .awards li,
 .sources li {
-  border-top: 1px solid var(--line);
-  padding-top: 0.85rem;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold);
+  border-radius: 0.45rem;
+  padding: 0.95rem 1rem 1rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: none;
 }
 
 .awards strong {
-  margin-right: 0.35rem;
-  color: var(--ink);
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--teal-dark);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .contact {
