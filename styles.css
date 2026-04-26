@@ -211,6 +211,7 @@ h3 {
   width: min(100%, 27rem);
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: 55% center;
   border: 10px solid #fff;
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
@@ -320,7 +321,7 @@ h3 {
   gap: 1.5rem;
   background:
     linear-gradient(120deg, rgba(13, 71, 74, 0.94), rgba(20, 107, 111, 0.9)),
-    url("https://www.fau.de/files/2023/10/Perez_Iannicelli-300x200.jpg") center / cover;
+    url("assets/paula-perez-toro.jpg") center / cover;
   color: #fff;
 }
 
