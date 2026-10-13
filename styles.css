@@ -546,6 +546,8 @@ main > .section:nth-of-type(even):not(.feature-band):not(.awards):not(.contact) 
 }
 
 .gallery-tile {
+  display: grid;
+  align-content: center;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 0.8rem;
@@ -555,6 +557,41 @@ main > .section:nth-of-type(even):not(.feature-band):not(.awards):not(.contact) 
 
 .gallery-tile:hover {
   border-color: var(--teal);
+}
+
+.gallery-tile-text {
+  min-height: 100%;
+  gap: 0.45rem;
+  padding: 0.9rem 0.8rem;
+  background:
+    radial-gradient(circle at top right, rgba(185, 139, 67, 0.18), transparent 6rem),
+    linear-gradient(160deg, rgba(111, 65, 172, 0.1), rgba(255, 255, 255, 0.96) 58%);
+}
+
+.gallery-tile-text strong,
+.gallery-tile-text span {
+  line-height: 1.2;
+}
+
+.gallery-tile-text strong {
+  color: var(--ink);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.tile-kicker {
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gallery-tile-text span:last-child {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 650;
 }
 
 .gallery-tile img {
