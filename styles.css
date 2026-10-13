@@ -30,9 +30,10 @@ body {
     linear-gradient(180deg, #fbf7ff 0, var(--paper) 36rem),
     var(--paper);
   color: var(--ink);
+  font-size: clamp(1.02rem, 0.98rem + 0.2vw, 1.14rem);
   font-family:
     "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.6;
+  line-height: 1.72;
 }
 
 a {
@@ -94,7 +95,7 @@ img {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.9rem 1.25rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .nav a {
@@ -114,6 +115,9 @@ img {
   padding: clamp(3.5rem, 8vw, 7rem) clamp(1rem, 5vw, 5rem) clamp(2.5rem, 5vw, 4.5rem);
   min-height: 82vh;
   border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 15% 18%, rgba(255, 255, 255, 0.95), transparent 26rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.04));
 }
 
 .hero-copy {
@@ -123,9 +127,9 @@ img {
 .eyebrow {
   margin: 0 0 0.65rem;
   color: var(--teal);
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -156,7 +160,7 @@ h2 {
 h3 {
   font-family: "Fraunces", Georgia, serif;
   margin-bottom: 0.45rem;
-  font-size: 1.05rem;
+  font-size: 1.18rem;
   line-height: 1.28;
   letter-spacing: 0;
 }
@@ -164,8 +168,8 @@ h3 {
 .lead {
   max-width: 43rem;
   color: var(--muted);
-  font-size: 1.25rem;
-  line-height: 1.72;
+  font-size: clamp(1.28rem, 1.18rem + 0.36vw, 1.52rem);
+  line-height: 1.76;
 }
 
 .hero-actions,
@@ -177,12 +181,12 @@ h3 {
 
 .button {
   display: inline-flex;
-  min-height: 2.75rem;
+  min-height: 3rem;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--line);
   border-radius: 0.45rem;
-  padding: 0.68rem 1rem;
+  padding: 0.8rem 1.08rem;
   background: var(--panel);
   color: var(--ink);
   font-weight: 750;
@@ -241,8 +245,10 @@ h3 {
 
 .portrait figcaption {
   margin-top: 0.7rem;
+  margin-left: auto;
   color: var(--muted);
   font-size: 0.85rem;
+  text-align: right;
 }
 
 .quick-facts {
@@ -258,9 +264,26 @@ h3 {
   background: #fbf7ff;
 }
 
+.latest-updates {
+  position: relative;
+}
+
+.latest-updates::before {
+  position: absolute;
+  inset: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 5vw, 5rem) auto;
+  height: 13rem;
+  border-radius: 1rem;
+  background:
+    linear-gradient(120deg, rgba(111, 65, 172, 0.14), rgba(185, 139, 67, 0.12)),
+    rgba(255, 255, 255, 0.64);
+  content: "";
+  pointer-events: none;
+}
+
 .quick-facts span,
 .timeline span,
-.publication-list time {
+.publication-list time,
+.update-card span {
   display: inline-block;
   margin-bottom: 0.35rem;
   color: var(--gold);
@@ -289,6 +312,12 @@ h3 {
   padding: clamp(3rem, 7vw, 6.5rem) clamp(1rem, 5vw, 5rem);
 }
 
+.latest-updates .section-heading,
+.latest-updates .updates-grid {
+  position: relative;
+  z-index: 1;
+}
+
 .two-column {
   display: grid;
   grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1.28fr);
@@ -296,7 +325,35 @@ h3 {
 }
 
 .body-copy {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+}
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.update-card {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1.4rem;
+  border: 1px solid rgba(221, 212, 235, 0.92);
+  border-radius: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 240, 251, 0.98));
+  box-shadow: 0 20px 45px rgba(52, 33, 74, 0.08);
+}
+
+.update-card h3,
+.update-card p {
+  margin-bottom: 0;
+}
+
+.update-card a {
+  width: fit-content;
+  margin-top: 0.25rem;
+  font-weight: 750;
 }
 
 .research-grid {
@@ -358,7 +415,20 @@ h3 {
 
 .section-heading {
   max-width: 55rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.subsection-heading {
+  display: grid;
+  gap: 0.35rem;
+  max-width: 48rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.subsection-heading h3,
+.subsection-heading p,
+.publication-note p {
+  margin-bottom: 0;
 }
 
 .publication-showcase {
@@ -429,7 +499,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 0.9rem;
+  font-size: 0.98rem;
 }
 
 .showcase-meta {
@@ -442,8 +512,8 @@ h3 {
 
 .showcase-copy h3 {
   margin-bottom: 0.4rem;
-  font-size: 0.98rem;
-  line-height: 1.18;
+  font-size: 1.12rem;
+  line-height: 1.22;
 }
 
 .showcase-copy > p:last-of-type {
@@ -468,10 +538,23 @@ h3 {
   gap: 1rem;
 }
 
+.senior-publications {
+  margin-bottom: 1rem;
+}
+
 .publication-list article {
   display: grid;
   gap: 0.2rem;
   padding: 1.2rem;
+}
+
+.publication-note {
+  max-width: 56rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid var(--gold);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .publication-list a {
@@ -626,6 +709,7 @@ h3 {
   }
 
   .quick-facts,
+  .updates-grid,
   .publication-list,
   .research-grid,
   .service-grid,
@@ -642,7 +726,7 @@ h3 {
 
   .nav {
     justify-content: flex-start;
-    font-size: 0.9rem;
+    font-size: 0.98rem;
   }
 
   h1 {
