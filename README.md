@@ -1,24 +1,19 @@
-# Dr.-Ing. Paula A. Pérez-Toro academic webpage
+# Dr.-Ing. Paula A. Perez-Toro Academic Website
 
-Static GitHub Pages site for Dr.-Ing. Paula A. Pérez-Toro.
+Static website for the academic profile of Dr.-Ing. Paula A. Perez-Toro.
 
-The page has been updated with details from the provided April 2026 academic CV. Private contact details from the CV were intentionally not included in the public webpage.
-The selected publications section was refreshed from the provided April 2026 citation export.
-The design also includes open-access research snapshot figures from recent papers involving Dr.-Ing. Paula A. Pérez-Toro.
+## Structure
 
-## Files
+- `index.html` - homepage
+- `research/` - research themes and focus areas
+- `publications/` - selected publications
+- `appointments/` - academic roles and training
+- `awards/` - awards and distinctions
+- `service/` - professional service and community activity
+- `contact/` - institutional contact details and external profiles
+- `styles.css` - shared site styling
+- `assets/` - images used across the site
 
-- `index.html` - single-page academic profile
-- `styles.css` - responsive styling
-- `assets/` - optimized portrait and paper-figure images used by the page
-- `.nojekyll` - ensures GitHub Pages serves the static files directly
-- `.github/workflows/pages.yml` - deploys the static site to GitHub Pages from `main`
+## Deployment
 
-## GitHub Pages deployment
-
-1. Create a public GitHub repository named `PauPerezT.github.io`.
-2. Push these files to the repository's `main` branch.
-3. In GitHub, open **Settings > Pages** and set the source to **GitHub Actions**.
-4. The page will publish at `https://pauperezt.github.io/`.
-
-Sources are linked at the bottom of the webpage.
+This repository is configured for GitHub Pages deployment from the `main` branch.
